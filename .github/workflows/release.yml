@@ -26,11 +26,11 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: linux/terraform-provider-redshift
+        name: terraform-provider-redshift_linux
         path: terraform-provider-redshift
         
-  mac-build:
-    name: macos-build
+  darwin-build:
+    name: darwin-build
     runs-on: macos-latest
     steps:
     - name: Set up Go 1.x
@@ -48,7 +48,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: macos/terraform-provider-redshift
+        name: terraform-provider-redshift_darwin
         path: terraform-provider-redshift
 
   windows-build:
@@ -70,5 +70,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: windows/terraform-provider-redshift
+        name: terraform-provider-redshift_windows
         path: terraform-provider-redshift
