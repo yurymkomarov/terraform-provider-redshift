@@ -26,7 +26,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: terraform-provider-redshift
+        name: linux/terraform-provider-redshift
         path: terraform-provider-redshift
         
   mac-build:
@@ -48,7 +48,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: terraform-provider-redshift
+        name: macos/terraform-provider-redshift
         path: terraform-provider-redshift
 
   windows-build:
@@ -70,5 +70,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: terraform-provider-redshift
+        name: windows/terraform-provider-redshift
         path: terraform-provider-redshift
