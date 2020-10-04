@@ -23,6 +23,11 @@ jobs:
         go install
         go vet ./...
         go build -o terraform-provider-redshift
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: terraform-provider-redshift
+        path: terraform-provider-redshift
         
   mac-build:
     name: macos-build
@@ -40,7 +45,12 @@ jobs:
         go install
         go vet ./...
         go build -o terraform-provider-redshift
-        
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: terraform-provider-redshift
+        path: terraform-provider-redshift
+
   windows-build:
     name: windows-build
     runs-on: windows-latest
@@ -57,3 +67,8 @@ jobs:
         go install
         go vet ./...
         go build -o terraform-provider-redshift
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: terraform-provider-redshift
+        path: terraform-provider-redshift
